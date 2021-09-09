@@ -1,0 +1,7 @@
+This repo will contains basic codes to remeber and learn ruby.
+Install ruby on windows and post install run 1,2,3 installer from terminals.
+Ruby comes auto installed on OSx, check the version and install updates.
+
+check the version by "ruby -v" command
+
+install atom IDE from atom.io
