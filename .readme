@@ -5,3 +5,10 @@ Ruby comes auto installed on OSx, check the version and install updates.
 check the version by "ruby -v" command
 
 install atom IDE from atom.io
+
+
+
+FOR VScode
+1. install extention "ruby solargraph"
+2. on terminal, type "gem install solargraph"
+3. update doc using "solargraph download-core"
