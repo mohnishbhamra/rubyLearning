@@ -31,3 +31,10 @@ puts 1+7
 puts 1+7.0 #prints 8.0 , number got boxed
 puts 1/7 #prints 0
 puts 1/7.0 #prints 0.14285714285714285
+
+
+num_in_string = "54"
+after_op = num_in_string*4; #this will have 54545454 in place
+after_op_num = num_in_string.to_i()*4; #this will do correct multiplication, ans will be 216
+puts ("after operation on string, num is "+after_op) 
+print ("after operation on converted string, num is ") ; puts (after_op_num.to_s())
