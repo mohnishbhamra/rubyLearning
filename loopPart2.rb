@@ -59,13 +59,15 @@ def specialLoopTimes (count)
     #note that here indexVarName var is init with 0 val and goes upto count-1 val, meaning loop actually runs count times
 end
 
-
-#forEachLoop(road);
-#forEachLoopFancyStyle1(road);
-#forEachLoopFancyStyle2(road);
-# doWhileLoop(road);
-# whileLoop(road);
-#untilLoop(road);
+=begin
+#using begin and end makes comment block
+forEachLoop(road);
+forEachLoopFancyStyle1(road);
+forEachLoopFancyStyle2(road);
+doWhileLoop(road);
+whileLoop(road);
+untilLoop(road);
+=end
 specialLoopTimes(5);
 
 
