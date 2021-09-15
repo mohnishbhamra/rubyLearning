@@ -41,3 +41,10 @@ end
 
 # professorObj = Professor.new(nil,nil,nil,nil); #`initialize': wrong number of arguments (given 0, expected 1..3) 
 # professorObj.hiProfessor()
+
+
+
+class_obj=4; 
+#and
+class_obj=(4); 
+#are same
