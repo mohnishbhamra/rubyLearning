@@ -39,5 +39,5 @@ class Professor < Student
     end
 end
 
-professorObj = Professor.new(nil,nil,nil,nil); #`initialize': wrong number of arguments (given 0, expected 1..3) 
-professorObj.hiProfessor()
+# professorObj = Professor.new(nil,nil,nil,nil); #`initialize': wrong number of arguments (given 0, expected 1..3) 
+# professorObj.hiProfessor()
