@@ -31,3 +31,9 @@ for i in 1..5
     s=String.new "stringVal"
     puts "object_id of #{s} is-> #{s.object_id}"
 end
+
+
+s=String.new "will be frezzed"
+puts "last val of s is #{s}"
+s.freeze #once frozen , object can't be unfreezed
+puts "is frozen #{s.frozen?}"
