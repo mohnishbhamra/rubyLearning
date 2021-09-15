@@ -80,3 +80,8 @@ puts "for obj2 instance var is ->"+myClassObj2.instance_var.to_s
 
 puts "for obj1 static var is ->"+myClassObj.static_var.to_s
 puts "for obj2 static var is ->"+myClassObj2.static_var.to_s
+
+
+#range
+1..3 # All x where 1 <= x <= 3
+1...3 # All x where 1 <= x < 3
