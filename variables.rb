@@ -121,3 +121,7 @@ if billion==billionLong then
 else 
     puts "unequal"
 end
+
+
+puts -(7/3)
+puts -7/3
