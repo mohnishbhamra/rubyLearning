@@ -127,3 +127,18 @@ puts -(7/3)
 puts -7/3
 
 p 4**3**2
+
+x=64
+p x**4 # This is the same thing as x*x*x*x
+p x**-1 # The same thing as 1/x
+p x**(1/3.0) # The cube root of x
+p x**(1/4) # Oops! Integer division means this is x**0, which is always 1
+p x**(1.0/4.0) # This is the fourth-root of x
+
+p "---------"
+a = 0.4 - 0.3 
+b = 0.1 # Evaluates to false in most implementations
+
+p a
+p b
+p a==b
