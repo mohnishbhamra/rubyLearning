@@ -62,11 +62,17 @@ end
 
 def specialLoopUpto (count)
     1.upto(count) do |indexVarName|
-        puts ("calling specialLoopTimes for time T="+indexVarName.to_s());
+        puts ("calling specialLoopUpto for time T="+indexVarName.to_s());
     end
     #note that here indexVarName var is init with 0 val and goes upto count-1 val, meaning loop actually runs count times
 end
 
+def specialLoopDownto (count)
+    count.downto 0 do |indexVarName|
+        puts ("calling specialLoopDownto for time T="+indexVarName.to_s());
+    end
+    #note that here indexVarName var is init with 0 val and goes upto count-1 val, meaning loop actually runs count times
+end
 
 =begin
 #using begin and end makes comment block
@@ -77,8 +83,11 @@ doWhileLoop(road);
 whileLoop(road);
 untilLoop(road);
 specialLoopTimes(5);
-=end
 specialLoopUpto(5);
+=end
+
+specialLoopDownto(5);
+
 
 
 
