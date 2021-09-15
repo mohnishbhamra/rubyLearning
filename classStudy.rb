@@ -37,10 +37,13 @@ class Professor < Student
     def hiProfessor
         puts "hi from Professor"
     end
+
+    alias helloProfessor hiProfessor #same methods functionality with diff name
 end
 
-# professorObj = Professor.new(nil,nil,nil,nil); #`initialize': wrong number of arguments (given 0, expected 1..3) 
-# professorObj.hiProfessor()
+professorObj = Professor.new(nil,nil,nil,nil); #`initialize': wrong number of arguments (given 0, expected 1..3) 
+professorObj.hiProfessor()
+professorObj.helloProfessor() #used alias
 
 
 
