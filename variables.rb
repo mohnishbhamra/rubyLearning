@@ -85,3 +85,32 @@ puts "for obj2 static var is ->"+myClassObj2.static_var.to_s
 #range
 1..3 # All x where 1 <= x <= 3
 1...3 # All x where 1 <= x < 3
+
+puts "-----------type casting---------"
+varA = Integer(1.34)
+puts varA
+puts varA.class
+
+varA = Integer("2")
+puts varA
+puts varA.class
+
+
+# varA = Integer("2.4") #exception
+# puts varA
+# puts varA.class
+
+varA = Float("2.4")
+puts varA
+puts varA.class
+
+
+varA = Integer(Float("2.4"))
+puts varA
+puts varA.class
+
+# varA = Numeric("2.7") #exception
+# puts varA
+# puts varA.class
+
+
