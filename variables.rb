@@ -114,3 +114,10 @@ puts varA.class
 # puts varA.class
 
 
+billion = 1_000_000_000
+billionLong = 1000000000
+if billion==billionLong then 
+    puts "equal" 
+else 
+    puts "unequal"
+end
