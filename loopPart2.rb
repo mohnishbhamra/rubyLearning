@@ -67,6 +67,9 @@ def specialLoopUpto (count)
     #note that here indexVarName var is init with 0 val and goes upto count-1 val, meaning loop actually runs count times
 end
 
+=begin rdoc
+=This function shows how to write loop from down to supplied value
+=end
 def specialLoopDownto (count)
     count.downto 0 do |indexVarName|
         puts ("calling specialLoopDownto for time T="+indexVarName.to_s());
