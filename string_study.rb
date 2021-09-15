@@ -25,3 +25,9 @@ firstIndexOfSubString = name.index(string_slim)
 puts ("first index of string-"+string_slim+ "->"+ firstIndexOfSubString.to_s ) #to_s converts num to string
 
 puts ("WORKING DIECRTLY WITH STRINGS".downcase())
+
+
+for i in 1..5
+    s=String.new "stringVal"
+    puts "object_id of #{s} is-> #{s.object_id}"
+end
