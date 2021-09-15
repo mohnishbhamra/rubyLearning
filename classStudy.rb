@@ -8,7 +8,7 @@ end
 class Student < Person
     attr_accessor :age , :marks
 
-    def initialize(age ,marks=nil,name="no name")
+    def initialize(age=nil ,marks=nil,name="no name")
         @name = name
         @age = age
     end  
@@ -38,5 +38,5 @@ class Professor < Student
     end
 end
 
-# professorObj = Professor.new(); #`initialize': wrong number of arguments (given 0, expected 1..3) 
-# professorObj.hiProfessor()
+professorObj = Professor.new(); #`initialize': wrong number of arguments (given 0, expected 1..3) 
+professorObj.hiProfessor()
