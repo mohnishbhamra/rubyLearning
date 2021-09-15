@@ -6,3 +6,5 @@ is_male = true
 flaws = nil #works like null
 puts (string_name + " is " + string_age + " years old");
 # puts (string_name + " is " + numeric_age + " years old"); //
+
+puts true.class
