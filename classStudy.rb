@@ -8,7 +8,7 @@ end
 class Student < Person
     attr_accessor :age , :marks , :grade
 
-    def initialize(age=nil ,marks=nil,name="no name", grade)
+    def initialize(age=nil ,marks=nil,name="no name", grade=nil)
         @name = name
         @age = age
         @grade = grade
