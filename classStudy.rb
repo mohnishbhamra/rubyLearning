@@ -31,3 +31,12 @@ puts student1.name;
 puts student1.age;
 puts "marks->"+student1.marks.to_s;
 
+
+class Professor < Student
+    def hiProfessor
+        puts "hi from Professor"
+    end
+end
+
+# professorObj = Professor.new(); #`initialize': wrong number of arguments (given 0, expected 1..3) 
+# professorObj.hiProfessor()
