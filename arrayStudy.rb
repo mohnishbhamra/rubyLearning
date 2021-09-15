@@ -34,5 +34,38 @@ puts("arr is "+arr.to_s())
 puts("arr is "+ arr.reverse().to_s());
 puts("after reversing arr does not remains reversed "+arr.to_s())
 
-ar.sort();
+# ar.sort();
 #puts(ar.to_s()); #sort': comparison of NilClass with String failed , basically sort failed as some values in array are null. Even if some values were numeric and some were strings , we could see same error
+
+
+puts "----- enumerating array and array like objects------"
+a = [2,2,3,4] # Start with an array
+puts "a->"+a.to_s
+b = a.map {|x| x*x } # Square elements: b is [1,4,9,16]
+puts "b->"+b.to_s
+c = a.select {|x| x%2==0 } # Select even elements: c is [2,4]
+puts "c->"+c.to_s
+
+sum = a.inject do |sum,x| # Compute the sum of the elements => 10
+    puts "sum is "+sum.to_s+" , x is "+x.to_s
+    sum + x
+end
+
+puts sum
+
+mulAns = a.inject do |i,x| # Compute the multiplications of the elements => 10
+    puts "ans is "+i.to_s+" , x is "+x.to_s
+    i*x
+end
+
+puts mulAns
+
+
+puts "----reducing---"
+reductionAnsSUM = a.reduce(:+) #reduction without init value
+reductionAnsMultiplication = a.reduce(1,:*) #reduction without init value
+reductionAnsMultiplication2 = a.reduce(2,:*) #reduction without init value 2
+
+puts "reductionAnsSUM->"+reductionAnsSUM.to_s
+puts "reductionAnsMultiplication->"+reductionAnsMultiplication.to_s
+puts "reductionAnsMultiplication2->"+reductionAnsMultiplication2.to_s
