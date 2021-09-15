@@ -60,3 +60,18 @@ def Math.square(num)
     num*num
 end
 puts "square of 2 can be evaluated using Math.square func "+Math.square(2).to_s # works now, since we have defined method square under module Math
+
+@global_val = 2
+def testReturn
+    if @global_val==2 
+        return 3 
+    end
+end
+puts testReturn
+
+def testReturnSpecial
+    return 7 if @global_val==2   # Note if used as a statement modifier
+end
+
+
+puts testReturnSpecial
