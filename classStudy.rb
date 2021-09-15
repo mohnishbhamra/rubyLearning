@@ -6,11 +6,12 @@ class Person
 end
 
 class Student < Person
-    attr_accessor :age , :marks
+    attr_accessor :age , :marks , :grade
 
-    def initialize(age=nil ,marks=nil,name="no name")
+    def initialize(age=nil ,marks=nil,name="no name", grade)
         @name = name
         @age = age
+        @grade = grade
     end  
 
     def hiStudent
@@ -23,7 +24,7 @@ class Student < Person
 end
 
 puts "-----------some statements in file classStudy.rb-----------------"
-student1 = Student.new(25,nil,"jason");
+student1 = Student.new(25,nil,"jason","A");
 # student1.name = "jason";
 # student1.age = 20; #age is getting assigned from constructor now
 # student1.marks = 54;
@@ -38,5 +39,5 @@ class Professor < Student
     end
 end
 
-professorObj = Professor.new(); #`initialize': wrong number of arguments (given 0, expected 1..3) 
+professorObj = Professor.new(nil,nil,nil,nil); #`initialize': wrong number of arguments (given 0, expected 1..3) 
 professorObj.hiProfessor()
