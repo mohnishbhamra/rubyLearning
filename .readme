@@ -13,3 +13,5 @@ FOR VScode
 2. on terminal, type "gem install solargraph"
 3. update doc using "solargraph download-core"
 4. install code runner to run code in vscode. to run code , open .rb file and right click to run.
+
+use ri "any class/module/command" for manaul. works just like man command
