@@ -36,9 +36,12 @@ addTwoNumbers(2,34);
 
 
 def makeSquare(num1)
-    return num*num; #just like js , method defination doesn't has to contain any return datatype
+    return num1*num1; #just like js , method defination doesn't has to contain any return datatype
 end
 
+def makeSquare2(num)
+    num*num; #just like js , here method defination has no return but still resturns value of num*num
+end
 
 def giveMultipleValues()
     #if we use return and some commas, return type becomes array automatically
@@ -47,3 +50,5 @@ end
 
 returnValues = giveMultipleValues();
 puts ("calling giveMultipleValues returns array->"+returnValues.to_s());
+
+puts makeSquare2(4)
