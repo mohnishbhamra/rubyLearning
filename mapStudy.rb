@@ -19,5 +19,5 @@ h = { # A hash that maps number names to digits
 puts "one's val"+h[:one].to_s # => 1. Access a value by key
 puts h[:three] = 3 # Add a new key/value pair to the hash
 h.each do |key,value| # Iterate through the key/value pairs
-print "#{key}:#{value}; " # Note variables substituted into string
+print "#{key}:#{value}; " # Note variables substituted into string called as string interpolation.
 end
