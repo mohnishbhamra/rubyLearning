@@ -91,8 +91,11 @@ specialLoopUpto(5);
 
 specialLoopDownto(5);
 
+BEGIN{
+    puts "this block runs first before anything "    
+}
 
 
-
-
+__END__
+puts "we can't reach here as we have __END__ above"
 
