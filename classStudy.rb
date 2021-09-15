@@ -1,0 +1,33 @@
+class Person
+    attr_accessor :name
+    def hiPerson
+        puts "hi from Person"
+    end
+end
+
+class Student < Person
+    attr_accessor :age , :marks
+
+    def initialize(age ,marks=nil,name="no name")
+        @name = name
+        @age = age
+    end  
+
+    def hiStudent
+        puts "hi from Student"
+    end
+    
+    # def initialize()
+    #     puts "normal constructor"
+    # end  
+end
+
+puts "-----------some statements in file classStudy.rb-----------------"
+student1 = Student.new(25,nil,"jason");
+# student1.name = "jason";
+# student1.age = 20; #age is getting assigned from constructor now
+# student1.marks = 54;
+puts student1.name;
+puts student1.age;
+puts "marks->"+student1.marks.to_s;
+
