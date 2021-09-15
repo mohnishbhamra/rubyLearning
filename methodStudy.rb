@@ -52,3 +52,11 @@ returnValues = giveMultipleValues();
 puts ("calling giveMultipleValues returns array->"+returnValues.to_s());
 
 puts makeSquare2(4)
+
+
+#puts "square of 2 can be evaluated using Math.square func "+Math.square(2).to_s # undefined method `square' for Math:Module (NoMethodError)
+#so lets define Math.square
+def Math.square(num)
+    num*num
+end
+puts "square of 2 can be evaluated using Math.square func "+Math.square(2).to_s # works now, since we have defined method square under module Math
