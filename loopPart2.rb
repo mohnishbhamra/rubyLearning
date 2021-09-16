@@ -99,3 +99,9 @@ BEGIN{
 __END__
 puts "we can't reach here as we have __END__ above"
 
+
+x = 0 # Initialize loop variable
+puts x = x + 1 while x < 10 # Output and increment in a single expression
+
+a = [1,2,3] # Initialize an array
+puts a.pop until a.empty? # Pop elements from array until empty
