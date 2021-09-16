@@ -103,7 +103,7 @@ puts x = x + 1 while x < 10 # Output and increment in a single expression
 a = [1,2,3] # Initialize an array
 puts a.pop until a.empty? # Pop elements from array until empty
 
-#exp gets executed first u know
+#can't perform like do while loop if we use untill or while as modifier
 x=10
 puts x = x-1  until x==0
 
@@ -114,7 +114,16 @@ puts x # output x
 x = x - 1 # decrement x
 end until x == 0 # End compound expression and modify it with a loop
 
+x = 0 # Initialize loop variable
+( # Start a compound expression: may be executed 0 times
+puts x # output x
+x = x - 1 # decrement x
+) until x == 0 # End compound expression and modify it with a loop
 
+
+#untill exp gets executed first u know before x=x-1. this is why even if we try to print x, we are not able to see it
+x = 0 
+puts x = x-1 until x<=0
 
 __END__
 puts "we can't reach here as we have __END__ above"
