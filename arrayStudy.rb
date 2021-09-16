@@ -91,3 +91,13 @@ p nils = Array.new(3) # [nil, nil, nil]: new array with 3 nil elements
 p zeros = Array.new(4, 0) # [0, 0, 0, 0]: new array with 4 0 elements
 p copy = Array.new(nils) # Make a new copy of an existing array
 p count = Array.new(3) {|i| i*2} # [0,2,4]: 3 elements computed from index
+
+
+
+p a = ('a'..'e').to_a # Range converted to ['a', 'b', 'c', 'd', 'e'] using to_a method
+p a[0,0] # []: this subarray has zero elements
+p a[1,1] # ['b']: a one-element array
+p a[-2,2] # ['d','e']: the last two elements of the array
+p a[0..2] # ['a', 'b', 'c']: the first three elements
+p a[-2..-1] # ['d','e']: the last two elements of the array
+p a[0...-1] # ['a', 'b', 'c', 'd']: all but the last element
