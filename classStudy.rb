@@ -99,3 +99,13 @@ nan > 0 # false: it is not greater than zero
 nan == 0 # false: it is not equal to zero
 nan == nan # false: it is not even equal to itself!
 nan.equal?(nan) # this is true, of course #special case u know!
+
+
+#Marshal.dump serialize object 
+#Marshal.load deserialize object 
+# Another use for Marshal.dump and Marshal.load is to create deep copies of objects:
+def deepcopy(o)
+    Marshal.load(Marshal.dump(o)) #as we know obj.dup or obj.clone doesn't always deep copy (only does when initialize_copy is defined on calling object). deep copy means also copy composition object/classes
+end
+
+#Marshal.dump(0,anyTargetIO) is also possible
