@@ -135,3 +135,6 @@ p r1.to_a
 #discrete range
 r2= 1..10
 p r2.to_a
+
+1..3.to_a # Tries to call to_a on the number 3
+(1..3).to_a # => [1,2,3]
