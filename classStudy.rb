@@ -84,3 +84,9 @@ p 1 === 1.0 # and === is not strict like eql?
 /\d+/ === "123" # true: the string matches the regular expression
 String === "s" # true: "s" is an instance of the class String
 :s === "s" # true in Ruby 1.9
+
+#Object Order operator <=>
+1 <=> 5 # -1
+5 <=> 5 # 0
+9 <=> 5 # 1
+"1" <=> 5 # nil: integers and strings are not comparable
