@@ -85,3 +85,9 @@ p a
 p words = %w[this is a test] # Same as: ['this', 'is', 'a', 'test']
 p open = %w| ( [ { < | # Same as: ['(', '[', '{', '<']
 p white = %W(\s \t \r \n) # Same as: ["\s", "\t", "\r", "\n"]
+
+p empty = Array.new # []: returns a new empty array
+p nils = Array.new(3) # [nil, nil, nil]: new array with 3 nil elements
+p zeros = Array.new(4, 0) # [0, 0, 0, 0]: new array with 4 0 elements
+p copy = Array.new(nils) # Make a new copy of an existing array
+p count = Array.new(3) {|i| i*2} # [0,2,4]: 3 elements computed from index
