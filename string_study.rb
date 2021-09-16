@@ -148,3 +148,8 @@ ans = ["ant", "bear", "cat"].all? { |word| word.length >= 3 } #=> true
 p ans
 ans = ["ant", "bear", "cat"].all? { |word| word.length >= 4 } #=> false
 p ans
+
+#iterating each value in string
+s = "¥1000"
+s.each_char {|x| print "#{x} " } # Prints "¥ 1 0 0 0". Ruby 1.9
+0.upto(s.size-1) {|i| print "#{s[i]} "} # Inefficient with multibyte chars
