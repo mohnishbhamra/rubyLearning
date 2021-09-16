@@ -96,12 +96,25 @@ BEGIN{
 }
 
 
-__END__
-puts "we can't reach here as we have __END__ above"
-
 
 x = 0 # Initialize loop variable
 puts x = x + 1 while x < 10 # Output and increment in a single expression
 
 a = [1,2,3] # Initialize an array
 puts a.pop until a.empty? # Pop elements from array until empty
+
+#exp gets executed first u know
+x=10
+puts x = x-1  until x==0
+
+#perfect do while loop example, however it is discouraged to use unitll or while as modifiers in multiple lines
+x = 10 # Initialize loop variable
+begin # Start a compound expression: executed at least once
+puts x # output x
+x = x - 1 # decrement x
+end until x == 0 # End compound expression and modify it with a loop
+
+
+
+__END__
+puts "we can't reach here as we have __END__ above"
