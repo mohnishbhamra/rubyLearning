@@ -136,5 +136,11 @@ chars = "hello world".tap {|x| puts "original object: #{x.inspect}"}
 .map {|c| c.succ } .tap {|x| puts "map returns: #{x.inspect}" }
 .sort .tap {|x| puts "sort returns: #{x.inspect}"}
 
+#extenal iterator
+iterator = 9.downto(1)
+loop do # Loop until StopIteration is raised
+print iterator.next # Print next item
+end
+puts "...blastoff!"
 __END__
 puts "we can't reach here as we have __END__ above"
