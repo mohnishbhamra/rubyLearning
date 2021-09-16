@@ -105,3 +105,13 @@ s[0,10] # "hello": returns all the characters that are available
 s[s.length,1] # "": there is an empty string immediately beyond the end
 s[s.length+1,1] # nil: it is an error to read past that
 s[0,-1] # nil: negative lengths don't make any sense
+
+s = "hello"
+s[0,1] = "H" # Replace first letter with a capital letter
+puts s
+s[s.length,0] = " world" # Append by assigning beyond the end of the string
+puts s
+s[5,0] = "," # Insert a comma, without deleting anything
+puts s
+s[5,6] = "" # Delete with no insertion; s == "Hellod"
+puts s
