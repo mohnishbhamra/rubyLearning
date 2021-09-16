@@ -145,3 +145,5 @@ p a==b
 
 axc =  # This assignment is never executed
 p axc #prints nil and doesnt give NoName error
+# POSSIBLE =  #uninitialized constant POSSIBLE (NameError), we can't play wid constant as we did with vars
+# p POSSIBLE
