@@ -125,6 +125,9 @@ x = x - 1 # decrement x
 x = 0 
 puts x = x-1 until x<=0
 
+#step loop, starts at 0 and iterates in steps of 0.1 until it reaches Math::PI:
+0.step(Math::PI, 0.1) {|x| puts Math.sin(x) }
+
 #This makes it super easy to debug at any point in the chain without having to store anything in 
 #in a local variable nor requiring much altering of the original code.
 chars = "hello world".tap {|x| puts "original object: #{x.inspect}"}
