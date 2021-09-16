@@ -142,3 +142,6 @@ b = 0.1 # Evaluates to false in most implementations
 p a
 p b
 p a==b
+
+axc =  # This assignment is never executed
+p axc #prints nil and doesnt give NoName error
