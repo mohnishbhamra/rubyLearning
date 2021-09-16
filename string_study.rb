@@ -153,3 +153,5 @@ p ans
 s = "¥1000"
 s.each_char {|x| print "#{x} " } # Prints "¥ 1 0 0 0". Ruby 1.9
 0.upto(s.size-1) {|i| print "#{s[i]} "} # Inefficient with multibyte chars
+
+print %Q^Say:\tHello world\n\tHello world\n^
