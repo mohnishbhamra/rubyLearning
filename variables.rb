@@ -147,3 +147,20 @@ axc =  # This assignment is never executed
 p axc #prints nil and doesnt give NoName error
 # POSSIBLE =  #uninitialized constant POSSIBLE (NameError), we can't play wid constant as we did with vars
 # p POSSIBLE
+
+
+puts "-----------Ambiguous test in var------------"
+class Ambiguous
+    def x; p"in function x and returning val 1"; return 1; end # A method named "x". Always returns 1
+    def test
+    p x # No variable has been seen; refers to method above: prints 1
+    # The line below is never evaluated, because of the "if false" clause. But
+    # the parser sees it and treats x as a variable for the rest of the method.
+    x = 0 if false
+    p x # x is a variable, but has never been assigned to: prints nil
+    x = 2 # This assignment does get evaluated
+    p x # So now this line prints 2
+    end
+end
+
+Ambiguous.new.test
