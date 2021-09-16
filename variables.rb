@@ -168,3 +168,52 @@ Ambiguous.new.test
 
 sample_ar = sample_ar || []
 p sample_ar
+
+
+
+#assignment misc
+x = 1, 2, 3 # x = [1,2,3]
+p x
+
+x, = 1, 2, 3 # x = 1; other values are discarded
+p x
+
+
+x, y, z = [1, 2, 3] # Same as x,y,z = 1,2,3
+p x
+p y
+p z
+
+x = [1,2] # x becomes [1,2]: this is not parallel assignment
+p x
+x, = [1,2] # x becomes 1: the trailing comma makes it parallel
+p x
+
+
+x, y, z = 1, 2 # x=1; y=2; z=nil
+
+x, y = 1, 2, 3 # x=1; y=2; 3 is not assigned anywhere
+#splat operator
+x, y, z = 1, *[2,3] # Same as x,y,z = 1,2,3
+
+# When an lvalue is preceded by an asterisk, it means that all extra rvalues should be placed into an array and assigned to this lvalue. 
+# The value assigned to that lvalue is always an array, and it may have zero, one, or more elements:
+x,*y = 1, 2, 3 # x=1; y=[2,3]
+x,*y = 1, 2 # x=1; y=[2]
+x,*y = 1 # x=1; y=[]
+# Ruby 1.9 only
+*x,y = 1, 2, 3 # x=[1,2]; y=3
+*x,y = 1, 2 # x=[1]; y=2
+*x,y = 1 # x=[]; y=1
+
+# splats may appear on both sides of a parallel assignment expression:
+x, y, *z = 1, *[2,3,4] # x=1; y=2; z=[3,4].
+
+#left hand side splat comes to very last
+a,*b,c,d = [1,2,3,4],[1,[2,[3,4]]]
+p a
+p b
+p c
+p d
+
+puts((x,y=1,2))
