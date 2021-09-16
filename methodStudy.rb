@@ -110,3 +110,32 @@ end
 multipleArgFunction("blah","furr")
 multipleArgFunction "blah2","furr2"
 #multipleArgFunction ("blah","furr") #this leads to error as we have space between func and (
+
+
+# Ruby program of using yield keyword
+def geeks
+    puts "In the geeks method"
+   
+    # using yield keyword
+    yield
+    puts "Again back to the geeks method"
+    yield
+ end
+ geeks {puts "This is block"}
+
+ 
+# Ruby program of using yield keyword 
+# with argument
+def gfg
+    yield 2*3 , 70
+    puts "In the method gfg"
+    yield 100
+ end
+
+ gfg do |i,y|
+        puts "block #{i} , #{y}"
+    end
+
+#or block can also be represented as {}
+gfg {|i| puts "block #{i}"}
+
