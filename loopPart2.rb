@@ -138,10 +138,20 @@ chars = "hello world".tap {|x| puts "original object: #{x.inspect}"}
 
 #extenal iterator
 iterator = 9.downto(1)
-#using loop for an implicit rescue of Kernel's
+#using loop for an implicit rescue of Kernel's for StopIteration exception
 loop do # Loop until StopIteration is raised
 print iterator.next # Print next item
 end
 puts "...blastoff!"
+
+# #Iteration and Concurrent Modification is possible in Ruby 
+# #That is why to avoid dirty read , please use each_in_snapshot instead each when such situation arrive
+# #a explanation of above statment can be seen thru codes below in Ruby Enumerable module
+# module Enumerable
+#     def each_in_snapshot &block
+#     snapshot = self.dup # Make a private copy of the Enumerable object
+#     snapshot.each &block # And iterate on the copy
+#     end
+# end
 __END__
 puts "we can't reach here as we have __END__ above"
