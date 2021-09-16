@@ -125,3 +125,5 @@ a | b # [1, 2, 3, 4, 5]: union duplicates are removed
 b | a # [5, 4, 3, 2, 1]: union elements are the same, but order is different
 a & b # [2, 3, 4] intersection
 b & a # [4, 3, 2] intersection
+
+p [1,2,3]==[1,2,3]
