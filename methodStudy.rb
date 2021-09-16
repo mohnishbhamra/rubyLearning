@@ -103,3 +103,10 @@ p valx
 
 testPassingOfMethodForString2 valx
 p valx
+
+def multipleArgFunction a,b
+    puts "#{a} , #{b}"
+end
+multipleArgFunction("blah","furr")
+multipleArgFunction "blah2","furr2"
+#multipleArgFunction ("blah","furr") #this leads to error as we have space between func and (
