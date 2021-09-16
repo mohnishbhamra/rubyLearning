@@ -31,3 +31,8 @@ sum = numbers["one"] + numbers["two"] # Retrieve values like this
 
 
 numbers = { one: 1, two: 2, three: 3 } #js way is accepted in ruby 1.9
+
+#loopoing hash
+for key,value in numbers
+puts "#{key} => #{value}"
+end
