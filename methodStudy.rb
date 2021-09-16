@@ -75,3 +75,31 @@ end
 
 
 puts testReturnSpecial
+
+
+def testPassingOfMethod (val)
+    val[9] = 900
+end
+
+a= (0..14).to_a
+p a
+testPassingOfMethod a
+p a
+
+
+#works same like java
+def testPassingOfMethodForString (val)
+    val = "i am changed"
+end
+
+def testPassingOfMethodForString2 (val)
+    val[val.length,0] = "append"
+end
+
+valx = "original val"
+p valx
+testPassingOfMethodForString valx
+p valx
+
+testPassingOfMethodForString2 valx
+p valx
