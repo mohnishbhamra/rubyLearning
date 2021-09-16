@@ -86,3 +86,5 @@ greeting << " " << "World"
 puts greeting # Outputs "Hello World"
 
 puts "za">"aaa" #string can be compared as per normal sorting basis
+puts "AA".casecmp "a" #returns int
+puts "aa".casecmp "b" #returns int
