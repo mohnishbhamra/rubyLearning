@@ -127,3 +127,19 @@ s[7..10] # nil: this Range is outside the string bounds
 s[-2..-1] = "p!" # Replacement: s becomes "help!"
 s[0...0] = "Please " # Insertion: s becomes "Please help!"
 s[6..10] = "" # Deletion: s becomes "Please!"
+
+#string indexing can be done with string as well, meaning it finds given substring in string
+s = "hellGGo" # Start with the word "hello"
+
+while(s["l"]) # While the string contains the substring "l"
+s["l"] = "L"; # Replace first occurrence of "l" with "L"
+end # Now we have "heLLo"
+
+s['L']="changed"
+puts s
+
+s['L'] = "Yeah"
+puts s
+
+s['GG'] =""
+puts s
