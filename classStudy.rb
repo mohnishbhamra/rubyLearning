@@ -73,3 +73,7 @@ a.object_id == b.object_id # Works like a.equal?(b)
 
 #== is diff which check for identical values
 a == b # true: but these two distinct objects have equal values
+
+#eql? is strict compare like ===
+p 1 == 1.0 # true: Fixnum and Float objects can be ==
+p 1.eql?(1.0) # false: but they are never eql!
