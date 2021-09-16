@@ -77,3 +77,10 @@ a == b # true: but these two distinct objects have equal values
 #eql? is strict compare like ===
 p 1 == 1.0 # true: Fixnum and Float objects can be ==
 p 1.eql?(1.0) # false: but they are never eql!
+
+#The === operator , moreover case equality
+p 1 === 1.0 # and === is not strict like eql?
+(1..10) === 5 # true: 5 is in the range 1..10
+/\d+/ === "123" # true: the string matches the regular expression
+String === "s" # true: "s" is an instance of the class String
+:s === "s" # true in Ruby 1.9
