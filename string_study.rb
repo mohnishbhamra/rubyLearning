@@ -88,3 +88,20 @@ puts greeting # Outputs "Hello World"
 puts "za">"aaa" #string can be compared as per normal sorting basis
 puts "AA".casecmp "a" #returns int
 puts "aa".casecmp "b" #returns int
+
+s = 'hello'; # Ruby 1.9
+s[0] # 'h': the first character of the string, as a string
+s[s.length-1] # 'o': the last character 'o'
+s[-1] # 'o': another way of accessing the last character
+s[-2] # 'l': the second-to-last character
+s[s.length] # nil: there is no character at that index
+
+#get the substring - first operand specifies an index (which may be negative), and the second specifies a length (which must be nonnegative).
+s = "hello"
+s[0,2] # "he"
+s[-1,1] # "o": returns a string, not the character code ?o
+s[0,0] # "": a zero-length substring is always empty
+s[0,10] # "hello": returns all the characters that are available
+s[s.length,1] # "": there is an empty string immediately beyond the end
+s[s.length+1,1] # nil: it is an error to read past that
+s[0,-1] # nil: negative lengths don't make any sense
