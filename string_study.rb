@@ -73,3 +73,14 @@ puts document
 
 
 puts `ls` #BACKTICKS CAN execute commands
+
+puts ?A #single character, it is not a string
+puts ?" #for "
+puts ?? #for ?
+#altough we have char in ruby like above but rudy does not have a special class to represent single characters
+
+
+#This operator is very different from +; it alters the lefthand operand rather than creating and returning a new object:
+greeting = "Hello"
+greeting << " " << "World"
+puts greeting # Outputs "Hello World"
