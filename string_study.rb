@@ -37,3 +37,39 @@ s=String.new "will be frezzed"
 puts "last val of s is #{s}"
 s.freeze #once frozen , object can't be unfreezed
 puts "is frozen #{s.frozen?}"
+
+
+$salutation = 'hello' # Define a global variable
+p "#$salutation world" # Use it in a double-quoted string
+p "#{$salutation} world2" # normal interpolation also works
+p "My phone #: 555-1234" # No escape needed
+
+
+
+msg = "hey, Use \#{ to interpolate expressions"
+puts msg #clean msg
+p msg #shows \ with #
+
+msg = "This string literal
+has two lines \
+but is written on three"
+
+puts msg
+p msg
+
+puts "\u0aaf"
+
+
+document = <<HERE # This is how we begin a here document
+
+
+
+This is a string literal.
+It has 3 lines and abruptly ends...
+line three
+HERE
+
+puts document
+
+
+puts `ls` #BACKTICKS CAN execute commands
