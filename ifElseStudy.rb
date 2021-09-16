@@ -50,3 +50,5 @@ elsif x == 4 then "four"
 # else "many" #else is optional like java
 end
 p name
+
+puts "hello" if x=5
