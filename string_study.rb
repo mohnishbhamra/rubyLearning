@@ -84,3 +84,5 @@ puts ?? #for ?
 greeting = "Hello"
 greeting << " " << "World"
 puts greeting # Outputs "Hello World"
+
+puts "za">"aaa" #string can be compared as per normal sorting basis
