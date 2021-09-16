@@ -105,3 +105,6 @@ p a[0...-1] # ['a', 'b', 'c', 'd']: all but the last element
 a = [1, 2, 3] + [4, 5] # [1, 2, 3, 4, 5]
 a = a + [[6, 7, 8]] # [1, 2, 3, 4, 5, [6, 7, 8]]
 #a = a + 9 # Error: righthand side must be an array
+
+
+['a', 'b', 'c', 'b', 'a'] - ['b', 'c', 'd'] # ['a', 'a']
