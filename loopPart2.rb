@@ -138,6 +138,7 @@ chars = "hello world".tap {|x| puts "original object: #{x.inspect}"}
 
 #extenal iterator
 iterator = 9.downto(1)
+#using loop for an implicit rescue of Kernel's
 loop do # Loop until StopIteration is raised
 print iterator.next # Print next item
 end
