@@ -115,3 +115,15 @@ s[5,0] = "," # Insert a comma, without deleting anything
 puts s
 s[5,6] = "" # Delete with no insertion; s == "Hellod"
 puts s
+
+#sub string manipulation with Range
+s = "hello"
+s[2..3] # "ll": characters 2 and 3
+s[-3..-1] # "llo": negative indexes work, too
+s[0..0] # "h": this Range includes one character index
+s[0...0] # "": this Range is empty
+s[2..1] # "": this Range is also empty
+s[7..10] # nil: this Range is outside the string bounds
+s[-2..-1] = "p!" # Replacement: s becomes "help!"
+s[0...0] = "Please " # Insertion: s becomes "Please help!"
+s[6..10] = "" # Deletion: s becomes "Please!"
