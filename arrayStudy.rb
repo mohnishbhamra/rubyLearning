@@ -113,3 +113,15 @@ a = [] # Start with an empty array
 a << 1 # a is [1]
 a << 2 << 3 # a is [1, 2, 3]
 a << [4,5,6] # a is [1, 2, 3, [4, 5, 6]]
+
+#Like the String class, Array also uses the multiplication operator for repetition:
+a = [0] * 8 # [0, 0, 0, 0, 0, 0, 0, 0]
+p a
+
+
+a = [1, 1, 2, 2, 3, 3, 4]
+b = [5, 5, 4, 4, 3, 3, 2]
+a | b # [1, 2, 3, 4, 5]: union duplicates are removed
+b | a # [5, 4, 3, 2, 1]: union elements are the same, but order is different
+a & b # [2, 3, 4] intersection
+b & a # [4, 3, 2] intersection
