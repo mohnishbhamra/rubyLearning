@@ -69,3 +69,19 @@ reductionAnsMultiplication2 = a.reduce(2,:*) #reduction without init value 2
 puts "reductionAnsSUM->"+reductionAnsSUM.to_s
 puts "reductionAnsMultiplication->"+reductionAnsMultiplication.to_s
 puts "reductionAnsMultiplication2->"+reductionAnsMultiplication2.to_s
+
+
+p [1, 2, 3] # An array that holds three Fixnum objects
+a= [-10...0, 0..10,] # An array of two ranges; trailing commas are allowed
+p a
+p a[0].class #its a range , not numbers
+p [[1,2],[3,4],[5]] # An array of nested arrays
+x=2
+y=3
+a = [x+y,x*y,]
+p a
+
+#special arrays
+p words = %w[this is a test] # Same as: ['this', 'is', 'a', 'test']
+p open = %w| ( [ { < | # Same as: ['(', '[', '{', '<']
+p white = %W(\s \t \r \n) # Same as: ["\s", "\t", "\r", "\n"]
