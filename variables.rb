@@ -164,3 +164,7 @@ class Ambiguous
 end
 
 Ambiguous.new.test
+
+
+sample_ar = sample_ar || []
+p sample_ar
