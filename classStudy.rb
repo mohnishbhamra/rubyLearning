@@ -90,3 +90,12 @@ String === "s" # true: "s" is an instance of the class String
 5 <=> 5 # 0
 9 <=> 5 # 1
 "1" <=> 5 # nil: integers and strings are not comparable
+
+# If the <=> operator returns nil, all the comparison operators derived from it return
+# false. The special Float value NaN is an example:
+nan = 0.0/0.0; # zero divided by zero is not-a-number
+nan < 0 # false: it is not less than zero
+nan > 0 # false: it is not greater than zero
+nan == 0 # false: it is not equal to zero
+nan == nan # false: it is not even equal to itself!
+nan.equal?(nan) # this is true, of course #special case u know!
