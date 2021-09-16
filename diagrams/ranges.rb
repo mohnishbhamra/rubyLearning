@@ -23,3 +23,5 @@ p triples.include? "ABC" # true; fast in 1.8 and slow in 1.9
 p triples.include? "ABCD" # true in 1.8, false in 1.9 as 1.9 does descrete test
 p triples.cover? "ABCD" # true and fast in 1.9 ~since 1.8 used to behave true for this in include, ruby has to bring this function in 1.9 for continous mempership test
 p triples.to_a.include? "ABCD" # false and slow in 1.8 and 1.9
+
+(1..10).each {|x| print x if x==3..x==5 } #x==3..x==5 is flip-flop when used in if or while loops etc
