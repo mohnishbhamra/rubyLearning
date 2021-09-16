@@ -34,3 +34,9 @@ end
 
 #puts whatDayIsIT("wed");
 switchSomething("foot")
+
+x=1,y=1
+case
+when x == 1 , y == 0 then p "x is one or y is zero" # Obscure syntax
+when x == 2 || y == 1 then p "x is two or y is one" # Easier to understand
+end
