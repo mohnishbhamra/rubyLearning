@@ -219,5 +219,5 @@ p d
 puts((x,y=1,2))
 
 #reason why you should use and instead of &&
-defined? a and defined? b # This works
-defined? a && defined? b # Evaluated as: defined?((a && defined? b))
+p defined? a and defined? b # This works , return nil
+p defined? a && defined? b # Evaluated as: defined?((a && defined? b)) , return expression
