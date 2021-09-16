@@ -143,3 +143,8 @@ puts s
 
 s['GG'] =""
 puts s
+
+ans = ["ant", "bear", "cat"].all? { |word| word.length >= 3 } #=> true
+p ans
+ans = ["ant", "bear", "cat"].all? { |word| word.length >= 4 } #=> false
+p ans
