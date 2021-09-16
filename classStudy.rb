@@ -51,3 +51,25 @@ class_obj=4;
 #and
 class_obj=(4); 
 #are same
+
+a = Person.new
+puts "person id is #{a.object_id}"
+p a.instance_of? Person
+p a.class == Person
+
+p professorObj.is_a? Person #checks inheritence
+p Person === professorObj # another way to check if professorObj is a Person but vice versa professorObj === Person is not true
+p professorObj === Student #false
+p Student === professorObj #true 
+
+#equal? method check for reference for eqaulity
+a = "Ruby" # One reference to one String object
+b = c = "Ruby" # Two references to another String object
+a.equal?(b) # false: a and b are different objects
+b.equal?(c) # true: b and c refer to the same object
+# By convention, subclasses never override the equal? method.
+
+a.object_id == b.object_id # Works like a.equal?(b)
+
+#== is diff which check for identical values
+a == b # true: but these two distinct objects have equal values
