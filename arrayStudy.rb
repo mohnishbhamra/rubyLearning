@@ -155,9 +155,8 @@ x, y = 1, 2, 3 # x=1; y=2; 3 is not assigned anywhere
 #splat operator
 x, y, z = 1, *[2,3] # Same as x,y,z = 1,2,3
 
-# When an lvalue is preceded by an asterisk, it means that all extra rvalues should be
-# placed into an array and assigned to this lvalue. The value assigned to that lvalue is
-# always an array, and it may have zero, one, or more elements:
+# When an lvalue is preceded by an asterisk, it means that all extra rvalues should be placed into an array and assigned to this lvalue. 
+# The value assigned to that lvalue is always an array, and it may have zero, one, or more elements:
 x,*y = 1, 2, 3 # x=1; y=[2,3]
 x,*y = 1, 2 # x=1; y=[2]
 x,*y = 1 # x=1; y=[]
@@ -168,3 +167,10 @@ x,*y = 1 # x=1; y=[]
 
 # splats may appear on both sides of a parallel assignment expression:
 x, y, *z = 1, *[2,3,4] # x=1; y=2; z=[3,4].
+
+#left hand side splat comes to very last
+a,*b,c,d = [1,2,3,4],[1,[2,[3,4]]]
+p a
+p b
+p c
+p d
