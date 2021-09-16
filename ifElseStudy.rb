@@ -41,3 +41,12 @@ else
     puts("both bulbs are off");
 end
 
+
+x=5
+name = if x == 1 then "one"
+elsif x == 2 then "two"
+elsif x == 3 then "three"
+elsif x == 4 then "four"
+# else "many" #else is optional like java
+end
+p name
